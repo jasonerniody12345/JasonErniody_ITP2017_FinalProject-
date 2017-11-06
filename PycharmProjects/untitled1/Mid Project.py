@@ -2,7 +2,7 @@
 from random import randrange as rand
 import pygame, sys
 
-# The configuration
+
 cell_size = 30
 cols = 10
 rows = 25
@@ -17,10 +17,10 @@ colors = [
     (50, 120, 52),
     (146, 202, 73),
     (150, 161, 218),
-    (35, 35, 35)  # Helper color for background grid
+    (35, 35, 35)
 ]
 
-# Define the shapes of the single parts
+
 tetris_shapes = [
     [[1, 1, 1],
      [0, 1, 0]],
@@ -95,10 +95,7 @@ class TetrisApp(object):
             pygame.font.get_default_font(), 12)
 
         self.screen = pygame.display.set_mode((self.width, self.height))
-      # We do not need
-        # mouse movement
-        # events, so we
-        # block them.
+
         self.next_stone = tetris_shapes[rand(len(tetris_shapes))]
         self.init_game()
 
